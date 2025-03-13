@@ -2,13 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: notes-app
-<<<<<<< HEAD
-  namespace: hpa
-  labels:
-    app: notes-app
-=======
   namespace: rbac
->>>>>>> 589f2d1 (RBAC DONE)
 spec:
   replicas: 1
   selector:
@@ -19,22 +13,17 @@ spec:
       labels:
         app: notes-app
     spec:
-<<<<<<< HEAD
-=======
       serviceAccountName: notes-app-sa  
->>>>>>> 589f2d1 (RBAC DONE)
       containers:
       - name: notes-app
         image: dev3103/notes-app:latest
         ports:
-<<<<<<< HEAD
           - containerPort: 8000
         resources:
           requests:
             cpu: "100m"
           limits:
             cpu: "200m"
-=======
-        - containerPort: 8000
->>>>>>> 589f2d1 (RBAC DONE)
+
+
 
