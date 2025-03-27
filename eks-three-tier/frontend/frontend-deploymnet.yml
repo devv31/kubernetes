@@ -20,5 +20,5 @@ spec:
             - containerPort: 3000
           env:
             - name: REACT_APP_BACKEND_URL
-              value: "http://backend-service:3500"  # Change if using internal service
+              value: "http://<ALB-DNS-Name>/backend/api/tasks"  # Change if using internal service
 
